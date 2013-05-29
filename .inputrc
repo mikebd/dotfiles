@@ -1,37 +1,89 @@
+# References:
+#   man readline
+#   info rluserman
+
+# Escape sequence -> readline function mapping
+# Type <ctrl-v>KEY at a shell prompt to see the mapping for your terminal
+
+$if mode=emacs
+
+"\eOd": backward-word
+"\eOc": forward-word
+
+# Incremental history seach: type beginning of command, <Up> / <Down>
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+
+"\e[5~": beginning-of-history
+"\e[6~": end-of-history
+# [OR] Incremental history seach: type beginning of command, <PageUp> / <PageDown>
+# "\e[5~": history-search-backward
+# "\e[6~": history-search-forward
+
+# VT / linux console
+"\e[1~": beginning-of-line
+"\e[4~": end-of-line
+# equivalent to "\C-?": delete-char
+"\e[3~": delete-char
+"\e[2~": quoted-insert
+
+# VT220 / non RH/Debian xterm
+# "\eOH": beginning-of-line
+# "\eOF": end-of-line
+
+# kvt / Konsole / freebsd console
+# "\e[H": beginning-of-line
+# "\e[F": end-of-line
+
+# rxvt and konsole (i.e. the KDE-app...)
+$if term=rxvt
+"\e[7~": beginning-of-line
+"\e[8~": end-of-line
+$endif
+
+$endif
+
+# Allow the command prompt to wrap to the next line
 set horizontal-scroll-mode Off
 
-# Allow 8-bit input/output
+# Allow 8-bit input
 set meta-flag on
-set convert-meta off
 set input-meta on
+
+# Disable 8th bit stripping (set conver-meta off) to allow the use of 8bit-characters
+# like german umlauts. However this makes the meta key not work as a meta key,
+# which is annoying to those which don't need to type in 8-bit characters.
+set convert-meta on
+
+# Keep the 8th bit for display
 set output-meta on
 
 #$if Bash
-  # Don't ring bell on completion
-  set bell-style none
+    # Don't ring bell on completion { none | visible | audible }
+    set bell-style none
 
-  # or, don't beep at me - show me
-  # set bell-style visible
+    # Don't echo ^C etc (new in bash 4.1).
+    # This only works for the command line itself, not if already running a command.
+    set echo-control-characters off
 
-  # Filename completion/expansion
-  set completion-ignore-case on
-  set show-all-if-ambiguous on
+    # Filename completion/expansion
+    set completion-ignore-case on
+    set show-all-if-ambiguous on
 
-  # Expand homedir name
-  #set expand-tilde on
+    # Expand homedir name
+    #set expand-tilde on
 
-  # Append "/" to all dirnames
-  set mark-directories on
-  set mark-symlinked-directories on
+    # Append "/" to all dirnames
+    set mark-directories on
+    set mark-symlinked-directories on
 
-  # Match all files
-  #set match-hidden-files on
+    # Match all files
+    #set match-hidden-files on
 
-  # 'Magic Space'
-  # Insert a space character then performs
-  # a history expansion in the line
-  #Space: magic-space
+    # 'Magic Space'
+    # Insert a space character then performs
+    # a history expansion in the line
+    #Space: magic-space
 #$endif
-
 
 # vim: set ai ci nocin et ff=unix nu nopi si sts=0 sw=4 ts=4 tw=0 wm=0 :
