@@ -81,9 +81,9 @@ set fillchars=
 if has("folding")
     set foldenable
     set foldcolumn=5
-    set foldlevelstart=3
+    set foldlevelstart=2
     set foldmethod=indent
-    set foldminlines=1
+    set foldminlines=10
 endif
 set laststatus=2                        " Always Show Status Line
 set linespace=0
