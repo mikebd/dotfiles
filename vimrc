@@ -39,9 +39,10 @@ set backupcopy=yes
 if isdirectory('/cygdrive/c/backup/vim/cygwin')
     " Put this first as the windows test will succeed under cygwin
     set backupdir=/cygdrive/c/backup/vim/cygwin,.
-elseif isdirectory('~/backup/vim')
-    set backupdir=~/backup/vim,.
+elseif isdirectory(expand("$HOME/backup/vim"))
+    let &backupdir = expand("$HOME/backup/vim,.")
 elseif isdirectory('c:/backup/vim/windows')
+
     set backupdir=c:/backup/vim/windows,.
 endif
 
@@ -301,5 +302,20 @@ inoremap <S-F1> <C-O>:echo "hi<" . synIDattr(synID(line("."),col("."),1),"name")
 
 " % used to match tags and open / close statements in addition to brackets
 runtime macros/matchit.vim
+
+" For further inspiration, see: https://wiki.archlinux.org/index.php/Vimrc#Vimrc
+function! RetabSpaces()
+    set expandtab
+    execute 'retab!'
+    call StripEolWhitespace()
+endfunction
+function! RetabTabs()
+    set noexpandtab
+    execute 'retab!'
+    call StripEolWhitespace()
+endfunction
+function! StripEolWhitespace()
+    execute '%s/\v( |\t)+$//'
+endfunction
 
 " vim: set ai ci nocin et ff=unix nu nopi si sts=4 sw=4 ts=4 tw=0 wm=0 :
