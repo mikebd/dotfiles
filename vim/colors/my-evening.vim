@@ -39,7 +39,7 @@ hi VisualNOS term=underline,bold cterm=underline,bold gui=underline,bold
 hi DiffText term=reverse cterm=bold ctermbg=Red gui=bold guibg=Red
 hi Cursor guibg=Green guifg=black
 hi lCursor guibg=Cyan guifg=black
-hi CursorLine term=none cterm=none ctermbg=Blue gui=none guibg=#300030          " grey30
+hi CursorLine term=none cterm=bold gui=none guibg=#300030          " grey30
 hi Directory term=bold ctermfg=LightCyan guifg=Cyan
 
 hi LineNr term=underline ctermfg=DarkCyan guifg=DarkCyan
