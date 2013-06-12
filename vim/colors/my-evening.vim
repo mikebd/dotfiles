@@ -33,7 +33,7 @@ hi StatusLineNC term=underline cterm=none,underline ctermfg=Cyan ctermbg=Black g
 hi VertSplit term=reverse cterm=bold ctermbg=Black ctermfg=DarkCyan gui=reverse guibg=cyan guifg=grey10
 
 "hi Visual term=reverse cterm=reverse gui=reverse guifg=Grey guibg=fg
-hi Visual term=reverse cterm=bold ctermbg=Green ctermfg=Yellow gui=none guibg=DarkGrey guifg=LightCyan
+hi Visual term=reverse cterm=bold ctermbg=DarkBlue ctermfg=White gui=none guibg=DarkGrey guifg=LightCyan
 
 hi VisualNOS term=underline,bold cterm=underline,bold gui=underline,bold
 hi DiffText term=reverse cterm=bold ctermbg=Red gui=bold guibg=Red
