@@ -1,8 +1,7 @@
-" Vim color file
-" Maintainer:   Bram Moolenaar <Bram@vim.org>
-" Last Change:  2001 May 21
+" Vim color file forked from evening.vim
 
-" This color scheme uses a dark grey background.
+" See current syntax assignments:
+"   :so $VIMRUNTIME/syntax/hitest.vim
 
 " First remove all existing highlighting.
 set background=dark
@@ -45,12 +44,12 @@ hi Directory term=bold ctermfg=LightCyan guifg=Cyan
 
 hi LineNr term=underline ctermfg=DarkCyan guifg=DarkCyan
 hi MoreMsg term=bold ctermfg=LightGreen gui=bold guifg=SeaGreen
-hi NonText term=none ctermfg=LightBlue guifg=DarkCyan
+hi NonText term=none ctermfg=DarkGrey guifg=DarkCyan
 hi Question term=standout ctermfg=LightGreen gui=bold guifg=Green
 
 hi Search term=reverse cterm=bold ctermbg=Grey ctermfg=DarkBlue gui=none guibg=DarkGrey guifg=LightGreen
 
-hi SpecialKey term=bold ctermfg=LightBlue guifg=Cyan
+hi SpecialKey term=bold ctermfg=DarkGrey guifg=DarkCyan
 hi Title term=bold ctermfg=LightMagenta gui=none guifg=Magenta
 hi WarningMsg term=standout ctermfg=LightRed guifg=LightRed
 hi WildMenu term=standout ctermbg=Yellow ctermfg=Black guibg=Yellow guifg=Black
