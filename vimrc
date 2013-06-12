@@ -58,14 +58,14 @@ set switchbuf=usetab,split
 set whichwrap=b,s,<,>,[,],h,l           " Allow cursor movement to wrap
 
 " File Format and Inserted Characters
-" set autoindent                        " in exrc
+set autoindent
 set expandtab
 set fileformats=unix,dos,mac
 set nocindent
 set nosmartindent
-" set shiftwidth=4                      " in exrc
+set shiftwidth=4
 set smartindent
-" set tabstop=4                         " in exrc
+set tabstop=4
 set softtabstop=4
 
 " File Rendering - affects display but not persisted content
@@ -86,10 +86,10 @@ if has("folding")
 endif
 set laststatus=2                        " Always Show Status Line
 set linespace=0
+set list
 set listchars=eol:$,tab:^I,trail:=,extends:+
-set nolist
-" set number                            " in exrc
-" set ruler                             " in exrc
+set number
+set ruler
 set shortmess=fiIlnxtToO
 function! FileFormatNotDos(var)
     if (a:var == 'unix')
@@ -178,11 +178,11 @@ set winheight=5
 set winminheight=5
 
 " Searching
-" set hlsearch                          " in exrc
-" set ignorecase
+set hlsearch
+set ignorecase
 set incsearch
-" set smartcase                         " in exrc
-" set wrapscan                          " in exrc
+set smartcase
+set wrapscan
 set tags=~/tags
 set showfulltag
 set path=.,,~\**
