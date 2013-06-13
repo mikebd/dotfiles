@@ -64,6 +64,7 @@ hi DiffDelete term=bold ctermfg=Blue ctermbg=DarkCyan gui=bold guifg=Blue guibg=
 hi Constant term=underline ctermfg=Grey guifg=Grey70
 hi Special term=bold ctermfg=LightGrey guifg=Orange guibg=grey5
 
+hi PreProc ctermfg=DarkGreen
 hi Bug term=bold cterm=bold ctermbg=Red ctermfg=White guibg=Red guifg=White
 hi Fixme term=bold cterm=bold ctermbg=Red ctermfg=White guibg=Red guifg=White
 hi Note term=bold cterm=bold ctermbg=Blue ctermfg=White guibg=Blue guifg=White
@@ -74,7 +75,7 @@ hi Boolean guifg=#1F85FF
 hi Number guifg=#FFD71F
 hi String guifg=#2FA2DB
 "hi Comment guibg=#331167 guifg=LightGrey
-hi Comment guibg=#003333 guifg=#66cc99
+hi Comment ctermfg=DarkCyan guibg=#003333 guifg=#66cc99
 
 " statusline color for file format != dos
 hi User1 term=bold cterm=bold ctermbg=Red ctermfg=White guibg=DarkRed guifg=White
