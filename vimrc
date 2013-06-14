@@ -315,7 +315,7 @@ function! RetabTabs()
     call StripEolWhitespace()
 endfunction
 function! StripEolWhitespace()
-    execute '%s/\v( |\t)+$//'
+    execute '%s/\v( |\t)+$//e'
 endfunction
 
 " vim: set ai ci nocin et ff=unix nu nopi si sts=4 sw=4 ts=4 tw=0 wm=0 :
