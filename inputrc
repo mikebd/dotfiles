@@ -53,7 +53,7 @@ set input-meta on
 # Disable 8th bit stripping (set convert-meta off) to allow the use of 8bit-characters
 # like german umlauts. However this makes the meta key not work as a meta key,
 # which is annoying to those which don't need to type in 8-bit characters.
-# set convert-meta on
+set convert-meta on
 
 # Keep the 8th bit for display
 set output-meta on
