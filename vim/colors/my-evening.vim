@@ -12,7 +12,7 @@ endif
 
 let colors_name = "my-evening"
 
-hi Normal ctermbg=Black ctermfg=White guifg=LightGrey guibg=Black
+hi Normal ctermbg=Black ctermfg=LightGrey guifg=LightGrey guibg=Black
 
 " Groups used in the 'highlight' and 'guicursor' options default value.
 hi ErrorMsg term=standout ctermbg=DarkRed ctermfg=White guibg=Red guifg=White
@@ -23,11 +23,11 @@ hi IncSearch term=underline,reverse cterm=bold ctermbg=Magenta ctermfg=Yellow gu
 hi ModeMsg term=bold cterm=bold gui=bold guibg=DarkBlue guifg=white
 
 " Status line for the current window
-hi StatusLine term=underline cterm=none ctermfg=Cyan ctermbg=Blue gui=none guifg=#ffcc33 guibg=#663333
+hi StatusLine term=underline cterm=none ctermfg=DarkGreen ctermbg=Black gui=none guifg=#ffcc33 guibg=#663333
 
 " Status line for the non-current window
 " hi StatusLineNC term=reverse cterm=reverse gui=reverse
-hi StatusLineNC term=underline cterm=none,underline ctermfg=Cyan ctermbg=Black gui=none,underline guifg=#cc6633 guibg=Black
+hi StatusLineNC term=underline cterm=none ctermfg=DarkBlue ctermbg=Black gui=none,underline guifg=#cc6633 guibg=Black
 
 "hi VertSplit term=reverse cterm=reverse gui=reverse
 hi VertSplit term=reverse cterm=bold ctermbg=Black ctermfg=DarkCyan gui=reverse guibg=cyan guifg=grey10
