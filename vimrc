@@ -184,7 +184,7 @@ set ignorecase
 set incsearch
 set smartcase
 set wrapscan
-set tags=~/tags
+set tags=~/tags,./tags
 set showfulltag
 set path=.,,~\**
 set cdpath=,,~\**
