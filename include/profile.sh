@@ -11,3 +11,5 @@ for i in ~/.include/profile.d/*.sh ; do
     fi
 done
 unset i
+
+[ -r ~/.include/bashrc.sh ] && . ~/.include/bashrc.sh
